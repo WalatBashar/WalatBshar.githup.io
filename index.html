@@ -4,7 +4,23 @@
         <meta charset="utf-8">
         <title>Geophysical Data Processing</title>
         <style>
-        
+        span {color: blue;}
+		.info { width: 70%;
+            height: 180px;
+		
+			}
+		#image { width: 300 px;
+		border: 2px ridge red;
+		margin: 15px;
+        padding: 35px;
+		float:left;
+        margin-left:25px;
+		
+		}
+		
+		
+		
+		
         
         </style>
     </head>
@@ -12,54 +28,65 @@
           <h1>Geophysical Data Processing</h1>
           <h2 id="Contents">Contents</h2>
           <ul>
-               <h3 id="Digitization">Digitization</h3>
+               <li>Digitization</li>
               <li>Spectral analysis</li>
-              <li>Waveform processing
-                  
-              </li>
+              <li>Waveform processing</li>
               </ul>
               
-    <h3>Digitization</h3>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRELxsryHEu2d9bU0zwRN3Yv454zzXilr6xIj107_Q6_spuiy4osw" width=300">
+	<div class="info">
+    <div id="Digitization"><h3>Digitization</h3>
+    <img id="image" src="data:image/png;base64,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"><br>
     <p><strong>Digitizing </strong> is the process of converting information into a <strong>digital format</strong>.
 	In this format, information is organized into discrete units of data (called <strong>bit</strong>/ s) that can be separately addressed (usually in multiple-bit groups called byte s). <br> 
-	This is the binary data that computers and many devices with computing capacity (such as<strong> digital camera</strong>/ s and <strong>digital hearing aid </strong>/s) can process.
+	This is the binary data that computers and many devices with computing capacity (such as<strong> <span>digital camera</span></strong>/ s and <strong><span>digital hearing aid </span></strong>/s) can process.
 
-Text and images can be digitized similarly: a <strong>scanner</strong> captures an image (which may be an image of text) <br> 
-and converts it to an image file, such as a bitmap . An optical character recognition (<strong> OCR</strong> ) program analyzes a text image for light and dark areas in order to identify each alphabetic letter or numeric digit, and converts each character into an <strong>ASCII</strong> code.<br>
-    <strong>Digitizing </strong>information makes it easier to preserve, access, and share. For example, an original historical document may only be accessible to people who visit its physical location, but if the document content is digitized, it can be made available to people worldwide.<br> 
-	There is a growing trend towards digitization of historically and culturally significant data.
+Text and images can be digitized similarly: a <span><strong>scanner</strong></span> captures an image (which may be an image of text)
+and converts it to an image file, such as a bitmap . An optical character recognition (<span><strong> OCR</strong> </span>) program analyzes a text image for light and dark areas in order to identify each alphabetic letter or numeric digit, and converts each character into an <strong>ASCII</strong> code.<br>
+    <strong>Digitizing </strong>information makes it easier to preserve, access, and share. For example, an original historical document may only be accessible to people who visit its physical location, but if the document content is digitized, it can be made available to people worldwide.
+	There is a growing trend towards digitization of historically and culturally significant data.<br>
     <strong>The most important concepts you will ever need in processing observations are <em>spatial</em> and <em>temporal frequencies. </em></strong><br>
 	
-    <img src="digitization1.png" width="300"/>
+	  
+	  <img src="digitization1.png" width="400"/><br>
+	  <a href="https://en.wikipedia.org/wiki/Digitization">Read more on Wikipedia</a>
+	</p> </div>
 	
-	   <h3 id="Spectral analysis">Spectral analysis</h3>
+    
+	
+	   <div id="Spectral analysis"><h3>Spectral analysis</h3>
 
         <thead>
-            <ol>
+            <ul>
                 <li>Fourier analysis</li>
                 <li>Sampling frequency</li>
                 <li>Spectra in space and time domain</li>
-            </ol>
+            </ul>
         </thead>
-      <h4 id="Fourier analysis">Fourier analysis:</h4>
-      <P><strong>Fourier analysis </strong> is the study of the way general functions may be represented or approximated by sums of simpler trigonometric functions. Fourier analysis grew from the study of <strong><em>Fourier series</em></strong>, and is named after<strong><em> Joseph Fourier</em></strong>, who showed that representing <br> 
+      <h4>Fourier analysis:</h4>
+	  <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Bass_Guitar_Time_Signal_of_open_string_A_note_%2855_Hz%29.png/400px-Bass_Guitar_Time_Signal_of_open_string_A_note_%2855_Hz%29.png"><br>
+	  
+      <P><strong>Fourier analysis </strong> is the study of the way general functions may be represented or approximated by sums of simpler trigonometric functions. Fourier analysis grew from the study of <strong><em>Fourier series</em></strong>, and is named after<strong><em> Joseph Fourier</em></strong>, who showed that representing 
 	  a function as a sum of trigonometric functions greatly simplifies the study of <strong>heat transfer.</strong><br>
       
-      Today, the subject of Fourier analysis encompasses a vast spectrum of mathematics. In the sciences and engineering, the process of decomposing a function into oscillatory components is often called Fourier analysis, while the operation of rebuilding the function from these pieces is <br> 
-	  known as <strong>Fourier synthesis</strong>. For example, determining what component frequencies are present in a musical note would involve computing the Fourier transform of a sampled musical note. One could then re-synthesize the same sound by including the frequency components as revealed in the Fourier analysis.
-	  In mathematics, the term Fourier analysis often refers to the study of both operations.<Br>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Bass_Guitar_Time_Signal_of_open_string_A_note_%2855_Hz%29.png/400px-Bass_Guitar_Time_Signal_of_open_string_A_note_%2855_Hz%29.png" width="300">
-     
-</P>
-<h4 id="Sampling frequency">Sampling frequency:</h4> 
-<p>
-<strong>The sampling frequency </strong>or <strong>sampling rate</strong>, fs, is the average number of samples obtained in one second (samples per second), thus<strong> fs = 1/T.</strong><br>
+      <strong>Today</strong>, the subject of Fourier analysis encompasses a vast spectrum of mathematics. In the sciences and engineering, the process of decomposing a function into oscillatory components is often called Fourier analysis, while the operation of rebuilding the function from these pieces is 
+	  known as <strong>Fourier </span>synthesis</span></strong>. For example, determining what component frequencies are present in a musical note would involve computing the Fourier transform of a sampled musical note. One could then re-synthesize the same sound by including the frequency components as revealed in the Fourier analysis.
+	  In mathematics, the term Fourier analysis often refers to the study of both operations.<br>
+	  <a href="https://en.wikipedia.org/wiki/Fourier_analysis">Read more on Wikipedia</a>
+	 
+      </p></div>
+	  <h4>Sampling frequency:</h4>
+	  <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Signal_Sampling.png/300px-Signal_Sampling.png"><br>
+<p><strong>The sampling frequency </strong>or <strong>sampling rate</strong>, fs, is the average number of samples obtained in one second (samples per second), thus<strong> fs = 1/T.</strong><br>
 
-Reconstructing a continuous function from samples is done by interpolation algorithms. The<strong> Whittaker–Shannon interpolation formula </strong>is mathematically equivalent to an ideal <strong>lowpass filter</strong> whose input is a sequence of Dirac delta functions that are modulated (multiplied) by the sample values. When the time interval between <br>
-adjacent samples is a constant (T), the sequence of delta functions is called a <strong>Dirac comb</strong>. Mathematically, the modulated Dirac comb is equivalent to the product of the comb function with s(t). That purely mathematical abstraction is sometimes referred to as impulse sampling.<br>
-Most sampled signals are not simply stored and reconstructed. But the fidelity of a theoretical reconstruction is a customary measure of the effectiveness of sampling. That fidelity is reduced when s(t) contains frequency components whose periodicity is smaller than two samples; or equivalently the ratio of cycles to samples exceeds ½ . <br>
-The quantity<em> ½ cycles/sample × <strong>fs</strong> samples/sec = <strong>fs</strong>/2 cycles/sec (<strong>hertz</strong>)</em> is known as the <strong>Nyquist frequency </strong>of the sampler. Therefore, s(t) is usually the output of a lowpass filter, functionally known as an <em>anti-aliasing </em>filter. Without an anti-aliasing filter, frequencies higher <br>than the Nyquist frequency will influence the samples in a way that is misinterpreted by the interpolation process.
-</p>
+Reconstructing a continuous function from samples is done by interpolation algorithms. The<strong><span> Whittaker–Shannon interpolation formula </span></strong>is mathematically equivalent to an ideal <strong><span>lowpass filter</span></strong> whose input is a sequence of Dirac delta functions that are modulated (multiplied) by the sample values. When the time interval between
+adjacent samples is a constant (T), the sequence of delta functions is called a <strong><span>Dirac comb</span></strong>. Mathematically, the modulated Dirac comb is equivalent to the product of the comb function with s(t). That purely mathematical abstraction is sometimes referred to as impulse sampling.<br>
+Most sampled signals are not simply stored and reconstructed. But the fidelity of a theoretical reconstruction is a customary measure of the effectiveness of sampling. That fidelity is reduced when s(t) contains frequency components whose periodicity is smaller than two samples; or equivalently the ratio of cycles to samples exceeds ½ . 
+The quantity<em> ½ cycles/sample × <strong>fs</strong> samples/sec = <strong>fs</strong>/2 cycles/sec (<strong>hertz</strong>)</em> is known as the <strong><span>Nyquist frequency </span></strong>of the sampler. Therefore, s(t) is usually the output of a lowpass filter, functionally known as an <em>anti-aliasing </em>filter. Without an anti-aliasing filter, frequencies higher than the <span>Nyquist frequency </span>will influence the samples in a way that is misinterpreted by the interpolation process.<br>
+
+	 <a href="https://en.wikipedia.org/wiki/Sampling_(signal_processing)">Read more on Wikipedia</a><br>
+	   	 
+
+</P></div>
 </body>
+</html>
        
